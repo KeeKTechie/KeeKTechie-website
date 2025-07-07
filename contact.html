@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | KeeKTechie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2e0e6a01a.js" crossorigin="anonymous"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F8FAFC;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Glowing Background Blobs (with Pulse Effect) */
+    .glow-blob {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0,76,151,0.15), transparent 70%);
+      filter: blur(100px);
+      animation: blobMove 20s infinite alternate ease-in-out, blobPulse 8s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    .glow-blob.orange {
+      background: radial-gradient(circle, rgba(245,124,0,0.15), transparent 70%);
+    }
+
+    @keyframes blobMove {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(50px, -50px) scale(1.1); }
+      100% { transform: translate(-30px, 30px) scale(1); }
+    }
+
+    @keyframes blobPulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.15); }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #004C97, #F57C00);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    input, textarea {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 0.75rem;
+      width: 100%;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #004C97;
+      box-shadow: 0 0 0 4px rgba(0,76,151,0.2);
+      outline: none;
+    }
+
+    footer {
+      background: #F1F5F9;
+      color: #6E7B8B;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Glowing Background Blobs -->
+  <div class="glow-blob" style="top: -100px; left: -150px;"></div>
+  <div class="glow-blob orange" style="bottom: -150px; right: -100px;"></div>
+
+  <!-- Header -->
+  <header class="w-full py-4 px-6 flex justify-between items-center fixed top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="keektechie-logo.png" alt="KeeKTechie Logo" class="w-10 h-10"/>
+      <h1 class="text-xl font-bold text-[#004C97]">KeeKTechie</h1>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-[#F57C00]">Home</a>
+      <a href="about.html" class="hover:text-[#F57C00]">About</a>
+      <a href="services.html" class="hover:text-[#F57C00]">Services</a>
+      <a href="contact.html" class="text-[#F57C00] font-medium">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-28 px-4 md:px-10">
+    <!-- Contact Header -->
+    <section class="text-center mb-10" data-aos="fade-down">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#004C97] mb-4">Contact Us</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Have a question, partnership idea, or need support? Reach out to KeeKTechie — we’d love to hear from you.
+      </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="max-w-2xl mx-auto glass p-8" data-aos="fade-up">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <form action="https://formspree.io/f/xwpbjyar" method="POST">"
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 mb-1 font-medium">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 mb-1 font-medium">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 mb-1 font-medium">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full">Send Message</button>
+          <input type="hidden" name="_redirect" value="https://kee-k-techie-website.vercel.app/thank-you.html">
+          <input type="text" name="_gotcha" style="display:none">
+        </form>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center mt-20">
+    <div class="mb-4">
+      <a href="https://github.com/yourgithub" class="mx-2 social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/yourtwitter" class="mx-2 social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://linktr.ee/yourlinktree" class="mx-2 social-icon"><i class="fas fa-link"></i></a>
+    </div>
+    <p>&copy; 2025 KeeKTechie. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Redirect to Thank You page
+    function handleSubmit(event) {
+      event.preventDefault();
+      window.location.href = "thank-you.html";
+    }
+  </script>
+</body>
+</html>

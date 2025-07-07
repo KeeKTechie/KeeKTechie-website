@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | KeeKTechie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/a2e0e6a01a.js" crossorigin="anonymous"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F8FAFC; /* Light background */
+      color: #333;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #004C97, #F57C00);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(15px);
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .team-card img {
+      border-radius: 50%;
+      border: 4px solid #F57C00;
+      transition: transform 0.4s ease;
+    }
+
+    .team-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .social-icon {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      color: #F57C00;
+    }
+
+    footer {
+      background: #F1F5F9;
+      color: #6E7B8B;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="w-full py-4 px-6 flex justify-between items-center fixed top-0 z-50">
+    <div class="flex items-center gap-2">
+      <img src="keektechie-logo.png" alt="KeeKTechie Logo" class="w-10 h-10"/>
+      <h1 class="text-xl font-bold text-[#004C97]">KeeKTechie</h1>
+    </div>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-[#F57C00]">Home</a>
+      <a href="about.html" class="text-[#F57C00] font-medium">About</a>
+      <a href="services.html" class="hover:text-[#F57C00]">Services</a>
+      <a href="contact.html" class="hover:text-[#F57C00]">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-28 px-4 md:px-10">
+    <!-- About Us -->
+    <section class="text-center mb-20" data-aos="fade-down">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#004C97] mb-6">About KeeKTechie</h1>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        KeeKTechie is your trusted partner for innovative IT solutions, forex trading expertise, and world-class technology training. We empower businesses and individuals to thrive in a rapidly evolving digital landscape with creativity, precision, and futuristic vision.
+      </p>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-center text-[#004C97] mb-10">Meet Our Team</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="team-card glass text-center p-6">
+          <img src="team-placeholder1.png" alt="Team Member" class="w-24 h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-1">Kamaldeen AbdulRahman</h3>
+          <p class="text-gray-600 mb-2">CEO & Founder</p>
+          <div>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <!-- Team Member 2 -->
+        <div class="team-card glass text-center p-6">
+          <img src="team-placeholder2.png" alt="Team Member" class="w-24 h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-1">Maryam AbdulRahman</h3>
+          <p class="text-gray-600 mb-2">UI/UX Developer</p>
+          <div>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <!-- Team Member 3 -->
+        <div class="team-card glass text-center p-6">
+          <img src="team-placeholder3.png" alt="Team Member" class="w-24 h-24 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-1">Abdulquadri Murthadr</h3>
+          <p class="text-gray-600 mb-2">UI/UX and Graphics Designer</p>
+          <div>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="mx-1 social-icon"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center mt-20">
+    <div class="mb-4">
+      <a href="https://github.com/yourgithub" class="mx-2 social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/yourtwitter" class="mx-2 social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://linktr.ee/yourlinktree" class="mx-2 social-icon"><i class="fas fa-link"></i></a>
+    </div>
+    <p>&copy; 2025 KeeKTechie. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>
